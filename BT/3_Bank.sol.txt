@@ -1,0 +1,100 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.0;
+
+contract Bank {
+    uint256 balance = 0;
+    address public accOwner;
+
+    // Constructor
+    constructor() {
+        accOwner = msg.sender;
+    }
+
+    // Deposit Ether
+    function Deposite() public payable {
+        require(accOwner == msg.sender, "You are not account owner");
+        require(msg.value > 0, "Value should be greater than 0");
+        balance += msg.value;
+    }
+
+    // Withdraw Ether
+    function withdraw() public payable {
+        require(accOwner == msg.sender, "You are not account owner");
+        require(balance > 0, "Insufficient balance");
+        balance -= msg.value;
+    }
+
+    // Show balance
+    function showBalance() public view returns (uint256) {
+        require(accOwner == msg.sender, "You are not account owner");
+        return balance;
+    }
+}
+
+
+// PROCEDURE TO EXECUTE THE SMART CONTRACT
+//
+// Step 1: Open Remix IDE
+// - Open https://remix.ethereum.org.
+// - Create a new file named BankAccount.sol inside the contracts folder.
+// - Paste the BankAccount smart contract program into the file.
+//
+// Step 2: Compile the Smart Contract
+// - Open the Solidity Compiler tab.
+// - Select compiler version 0.8.20 or a compatible higher 0.8.x version.
+// - Click the Compile BankAccount.sol button.
+// - A green tick indicates successful compilation.
+//
+// Step 3: Connect MetaMask
+// - Open the Deploy & Run Transactions tab.
+// - Set the Environment to Injected Provider - MetaMask.
+// - MetaMask will ask for permission to connect.
+// - Select your account and connect it to Remix.
+// - Make sure the selected network is Sepolia Test Network.
+//
+// Step 4: Deploy the Smart Contract
+// - Select BankAccount from the Contract dropdown.
+// - Click the Deploy button.
+// - Confirm the deployment transaction in MetaMask.
+// - After successful deployment, copy the deployed contract address.
+// - Open https://sepolia.etherscan.io and search for the contract address to verify the deployment.
+//
+// Step 5: Deposit ETH
+// - In the deployed contract section, locate the Value field.
+// - Enter 0.01 as the value.
+// - Select Ether as the unit.
+// - Click the orange deposit button.
+// - Confirm the transaction in MetaMask.
+//
+// Step 6: Display Account Balance
+// - Click the showBalance button.
+// - Expected output: 10000000000000000 Wei.
+// - This represents 0.01 ETH.
+//
+// Step 7: Withdraw ETH
+// - Locate the withdraw function.
+// - Enter 5000000000000000 in the amount (uint256) field.
+// - This represents 0.005 ETH.
+// - Keep the separate Value field at 0.
+// - Click withdraw and confirm the transaction in MetaMask.
+//
+// Step 8: Verify Remaining Balance
+// - Click the showBalance button again.
+// - Expected output: 5000000000000000 Wei.
+// - This represents 0.005 ETH.
+//
+// Step 9: Test Failure Cases
+// - Try withdrawing an amount greater than the available balance.
+// - The transaction should revert with the message: Insufficient balance.
+// - Try depositing with the Value field set to 0.
+// - The transaction should revert with the message: Deposit must be greater than 0.
+//
+// Step 10: Verify Transactions on Etherscan
+// - Open Sepolia Etherscan.
+// - Search using the deployed contract address.
+// - Check the Transactions tab to view deployment and function-call transactions.
+// - Check the Events or Logs section, if available, to inspect emitted events.
+// - Take screenshots of the successful deployment, deposit, balance, withdrawal, and transaction verification.
+//
+// NOTE: These are the supplied procedure steps. Confirm that the contract's function names,
+// withdrawal parameters, and revert messages match the deployed contract before following them.

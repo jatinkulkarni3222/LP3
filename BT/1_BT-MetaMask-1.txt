@@ -1,0 +1,89 @@
+MetaMask Practical – Step-by-Step Procedure
+Aim: To create a MetaMask wallet, connect it to the Sepolia test network, perform ETH transactions, and calculate gas fees.
+Step 1: Install MetaMask
+1. Open the official website: https://metamask.io/
+2. Click Download.
+3. Select your browser (Google Chrome).
+4. Click Add to Chrome.
+5. Click Add Extension.
+6. Pin the MetaMask extension to your browser toolbar.
+
+Step 2: Create a New Wallet
+1. Open the MetaMask extension.
+2. Click Create a new wallet.
+3. Agree to the terms and conditions.
+4. Set a strong password.
+5. MetaMask will generate a 12-word Secret Recovery Phrase.
+6. Write the phrase on paper and confirm it when asked.
+Important: Never share your Secret Recovery Phrase with anyone. Never take a screenshot or store it online.
+
+Step 3: Enable Sepolia Test Network
+1. Open MetaMask.
+2. Go to Settings.
+3. Select Advanced.
+4. Enable Show test networks.
+5. Return to the wallet.
+6. Open the network dropdown.
+7. Select Sepolia.
+Sepolia is an Ethereum test network used for practicing blockchain transactions without spending real ETH.
+Step 4: Get Free Test ETH
+1. Copy your MetaMask account address (starting with 0x).
+2. Open a Sepolia faucet. (https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
+3. Paste your wallet address.
+4. Complete any required verification.
+5. Request free Sepolia test ETH.
+6. Wait for the transaction to complete.
+7. Check your MetaMask wallet balance.
+Faucet websites:
+- Google Cloud Sepolia Faucet
+- Alchemy Sepolia Faucet
+Step 5: Send ETH to Another Account
+1. Open MetaMask.
+2. Click Send.
+3. Enter the recipient's wallet address.
+4. Enter the amount: 0.001 ETH.
+5. Click Next.
+6. Review the transaction details.
+7. Confirm the transaction.
+Step 6: Check Gas Fee Details
+Before confirming the transaction:
+1. Open the gas fee or Edit option.
+2. Observe the following parameters:
+   - Gas Fee: Estimated transaction cost.
+   - Gas Limit: Maximum amount of gas allowed.
+   - Max Base Fee: Maximum base fee per gas you are willing to pay.
+   - Priority Fee: Additional tip paid to the validator.
+Step 7: Repeat Transactions Using Three Speed Options
+Perform the transaction using these three options:
+1. Low
+2. Market
+3. Aggressive
+Record the estimated gas fee for each option.
+Speed	Estimated Gas Fee
+Low	______ ETH
+Market	______ ETH
+Aggressive	______ ETH
+
+Step 8: View Transaction Details
+1. Open MetaMask.
+2. Navigate to Activity.
+3. Select your completed transaction.
+4. Click View on block explorer.
+5. The Sepolia Etherscan page will open.
+6. Record the following details:
+Parameter	Details
+Transaction Hash	__________
+Block Number	__________
+Gas Used	__________
+Gas Price	__________
+Transaction Fee	__________
+
+Step 9: Calculate and Compare Transaction Fees
+Formula:
+
+Transaction Fee = Gas Used * Gas Price
+
+
+Example:
+- Gas Used = 21,000
+- Gas Price = 10 Gwei

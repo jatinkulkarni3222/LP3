@@ -1,0 +1,73 @@
+MetaMask Practical – Step-by-Step Procedure
+Aim: To create multiple accounts in MetaMask, transfer ETH between accounts, verify transactions using Etherscan, and understand account management.
+
+Procedure
+Step 1: Open MetaMask
+1. Open the MetaMask browser extension.
+2. Enter your password if required.
+3. Confirm that you are connected to the Sepolia test network.
+
+Step 2: Rename Account 1
+1. Open the account options.
+2. Select the rename option.
+3. Rename Account 1 to Wallet-A.
+4. Save the changes.
+
+Step 3: Create Account 2
+1. Click the account icon.
+2. Select Add account.
+3. Create a new account.
+4. Rename it to Wallet-B.
+Both accounts are generated using the same Secret Recovery Phrase.
+
+Step 4: Copy Wallet-B Address
+1. Switch to Wallet-B.
+2. Copy its wallet address (starting with 0x).
+3. Verify the first and last four characters.
+4. Keep the address ready for the transaction.
+
+Step 5: Send ETH from Wallet-A to Wallet-B
+1. Switch to Wallet-A.
+2. Click Send.
+3. Paste the Wallet-B address.
+4. Enter the amount, for example, 0.01 ETH.
+5. Review the transaction details and gas fee.
+6. Click Confirm.
+
+Step 6: Verify Transaction Status
+1. Open the Activity tab.
+2. Check the transaction status.
+3. Wait until the status changes from Pending to Confirmed.
+4. Open the transaction details.
+
+Step 7: Verify Transaction on Etherscan
+1. Click View on block explorer.
+2. The Sepolia Etherscan website will open.
+3. Observe and record the following details:
+Parameter	Details
+Transaction Hash	__________
+Status	__________
+Block Number	__________
+From	__________
+To	__________
+Value	__________
+Transaction Fee	__________
+
+Step 8: Verify Received ETH
+1. Switch to Wallet-B.
+2. Check the wallet balance.
+3. Verify that the transferred ETH has been received.
+4. Optionally, send some ETH back to Wallet-A.
+
+Step 9: Understand Private Key Import (Optional)
+1. Open Account details.
+2. Select Show private key to understand how private key export works.
+3. Alternatively, use the Import account option to import an account using its private key.
+4. Delete the imported test account after completing the practical.
+Important: Never share your private key or Secret Recovery Phrase. Use only test accounts and never expose real wallet credentials.
+
+Step 10: Display Wallet QR Code (Optional)
+1. Open Wallet-A or Wallet-B.
+2. Click Receive.
+3. A QR code containing your wallet address will appear.
+4. You can scan it to obtain the wallet address.
